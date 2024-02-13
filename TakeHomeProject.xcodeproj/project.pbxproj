@@ -16,6 +16,7 @@
 		AAD375272B7A4F2D0053C52C /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD375262B7A4F2D0053C52C /* GFButton.swift */; };
 		AAD375292B7A60980053C52C /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD375282B7A60980053C52C /* GFTextField.swift */; };
 		AAD3752C2B7B43DD0053C52C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3752B2B7B43DD0053C52C /* UIViewExtensions.swift */; };
+		AAD3752E2B7B4EFA0053C52C /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3752D2B7B4EFA0053C52C /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AAD375262B7A4F2D0053C52C /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		AAD375282B7A60980053C52C /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		AAD3752B2B7B43DD0053C52C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		AAD3752D2B7B4EFA0053C52C /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				AAD375262B7A4F2D0053C52C /* GFButton.swift */,
 				AAD375222B7A49C90053C52C /* SearchVC.swift */,
 				AAD375242B7A49FE0053C52C /* FavoritesListVC.swift */,
+				AAD3752D2B7B4EFA0053C52C /* FollowerListVC.swift */,
 				AAD3752A2B7B43C70053C52C /* Extension */,
 				AA34345D2B7A335800C789A3 /* Assets.xcassets */,
 				AA34345F2B7A335800C789A3 /* LaunchScreen.storyboard */,
@@ -160,6 +163,7 @@
 				AAD375272B7A4F2D0053C52C /* GFButton.swift in Sources */,
 				AAD375232B7A49CA0053C52C /* SearchVC.swift in Sources */,
 				AA3434552B7A335500C789A3 /* AppDelegate.swift in Sources */,
+				AAD3752E2B7B4EFA0053C52C /* FollowerListVC.swift in Sources */,
 				AA3434572B7A335500C789A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
