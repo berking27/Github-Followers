@@ -15,6 +15,7 @@
 		AAD375252B7A49FE0053C52C /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD375242B7A49FE0053C52C /* FavoritesListVC.swift */; };
 		AAD375272B7A4F2D0053C52C /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD375262B7A4F2D0053C52C /* GFButton.swift */; };
 		AAD375292B7A60980053C52C /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD375282B7A60980053C52C /* GFTextField.swift */; };
+		AAD3752C2B7B43DD0053C52C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3752B2B7B43DD0053C52C /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AAD375242B7A49FE0053C52C /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		AAD375262B7A4F2D0053C52C /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		AAD375282B7A60980053C52C /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		AAD3752B2B7B43DD0053C52C /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +68,20 @@
 				AAD375262B7A4F2D0053C52C /* GFButton.swift */,
 				AAD375222B7A49C90053C52C /* SearchVC.swift */,
 				AAD375242B7A49FE0053C52C /* FavoritesListVC.swift */,
+				AAD3752A2B7B43C70053C52C /* Extension */,
 				AA34345D2B7A335800C789A3 /* Assets.xcassets */,
 				AA34345F2B7A335800C789A3 /* LaunchScreen.storyboard */,
 				AA3434622B7A335800C789A3 /* Info.plist */,
 			);
 			path = TakeHomeProject;
+			sourceTree = "<group>";
+		};
+		AAD3752A2B7B43C70053C52C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AAD3752B2B7B43DD0053C52C /* UIViewExtensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD375292B7A60980053C52C /* GFTextField.swift in Sources */,
+				AAD3752C2B7B43DD0053C52C /* UIViewExtensions.swift in Sources */,
 				AAD375252B7A49FE0053C52C /* FavoritesListVC.swift in Sources */,
 				AAD375272B7A4F2D0053C52C /* GFButton.swift in Sources */,
 				AAD375232B7A49CA0053C52C /* SearchVC.swift in Sources */,
