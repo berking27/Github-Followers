@@ -19,15 +19,14 @@ class NetworkManager {
     /// - Parameters:
     ///   - username: Follower username
     ///   - page: For Pagination
-    ///   - completion: Data will return as Follower if no follower it'll return ErrorMessage (Enum Error)
-    ///                 Both should optional because if there is no error there should be followers also opposite of this situation ok
-    func getFollowers(for username: String, page: Int, completion: @escaping ([Follower]?, ErrorMessage?) -> Void) {
+    ///   - completion: Returns Result in failure case it retruns Failure, in Success case it returns [Follower]
+    func getFollowers(for username: String, page: Int, completion: @escaping (Result<[Follower], GFError>) -> Void) {
         ///Creating endpoint
         let endpoint = baseUrl + "\(username)/followers?per_page=60&page=\(page)"
         
         ///Check if url valid
         guard let url = URL(string: endpoint) else {
-            completion(nil, .invalidUsername)
+            completion(.failure(.invalidUsername))
             return
         }
         
@@ -35,19 +34,19 @@ class NetworkManager {
             
             ///Check if error exists
             if let _ = error {
-                completion(nil, .unableToComplete)
+                completion(.failure(.unableToComplete))
                 return
             }
             
             ///Check if response valid and response code OK
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completion(nil, .invalidResponse)
+                completion(.failure(.invalidResponse))
                 return
             }
             
             ///Check if there is any data
             guard let data = data else {
-                completion(nil, .invalidData)
+                completion(.failure(.invalidData))
                 return
             }
             
@@ -56,10 +55,10 @@ class NetworkManager {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase ///Converting snake_Case to camleCase
                 
                 let followers = try decoder.decode([Follower].self, from: data)
-                completion(followers, nil) ///Getting Data without any error
+                completion(.success(followers))
                 
             } catch {
-                completion(nil, .invalidData)
+                    completion(.failure(.invalidData))
             }
             
         }
