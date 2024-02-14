@@ -19,15 +19,15 @@ class NetworkManager {
     /// - Parameters:
     ///   - username: Follower username
     ///   - page: For Pagination
-    ///   - completion: Data will return as Follower if no follower it return String (Error)
+    ///   - completion: Data will return as Follower if no follower it'll return ErrorMessage (Enum Error)
     ///                 Both should optional because if there is no error there should be followers also opposite of this situation ok
-    func getFollowers(for username: String, page: Int, completion: @escaping ([Follower]?, String?) -> Void) {
+    func getFollowers(for username: String, page: Int, completion: @escaping ([Follower]?, ErrorMessage?) -> Void) {
         ///Creating endpoint
         let endpoint = baseUrl + "\(username)/followers?per_page=60&page=\(page)"
         
         ///Check if url valid
         guard let url = URL(string: endpoint) else {
-            completion(nil, "This username created an invalid request. Please try again.")
+            completion(nil, .invalidUsername)
             return
         }
         
@@ -35,19 +35,19 @@ class NetworkManager {
             
             ///Check if error exists
             if let _ = error {
-                completion(nil, "Unable to complete your request. Please check your internet connection")
+                completion(nil, .unableToComplete)
                 return
             }
             
             ///Check if response valid and response code OK
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-             completion(nil, "Invalid response from the server. Please Try Again.")
+                completion(nil, .invalidResponse)
                 return
             }
             
-            //Check if there is any data
+            ///Check if there is any data
             guard let data = data else {
-                completion(nil, "The Data recieved from the server was invalid. Please Try Again!")
+                completion(nil, .invalidData)
                 return
             }
             
@@ -59,7 +59,7 @@ class NetworkManager {
                 completion(followers, nil) ///Getting Data without any error
                 
             } catch {
-                completion(nil, "The Data recieved from the server was invalid. Please Try Again!")
+                completion(nil, .invalidData)
             }
             
         }
