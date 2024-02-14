@@ -76,8 +76,9 @@
 		AA3434532B7A335500C789A3 /* TakeHomeProject */ = {
 			isa = PBXGroup;
 			children = (
-				AA93D9732B7CA86900779C75 /* Model */,
+				AA3434622B7A335800C789A3 /* Info.plist */,
 				AA93D9722B7CA34F00779C75 /* Support */,
+				AA93D9732B7CA86900779C75 /* Model */,
 				AA93D9702B7CA28200779C75 /* Screens */,
 				AA93D9712B7CA2BC00779C75 /* Custom Views */,
 				AAD3752A2B7B43C70053C52C /* Extensions */,
@@ -89,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				AAD375222B7A49C90053C52C /* SearchVC.swift */,
-				AAD375242B7A49FE0053C52C /* FavoritesListVC.swift */,
 				AAD3752D2B7B4EFA0053C52C /* FollowerListVC.swift */,
+				AAD375242B7A49FE0053C52C /* FavoritesListVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -114,7 +115,6 @@
 				AA3434562B7A335500C789A3 /* SceneDelegate.swift */,
 				AA34345D2B7A335800C789A3 /* Assets.xcassets */,
 				AA34345F2B7A335800C789A3 /* LaunchScreen.storyboard */,
-				AA3434622B7A335800C789A3 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
