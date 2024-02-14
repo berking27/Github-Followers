@@ -1,5 +1,5 @@
 //
-//  UIViewExtensions.swift
+//  UIView+Extension.swift
 //  TakeHomeProject
 //
 //  Created by Berkin KOCA on 13.02.2024.
