@@ -29,6 +29,7 @@
 		AAD375322B7B5A470053C52C /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD375312B7B5A470053C52C /* GFBodyLabel.swift */; };
 		AAD375342B7B5B7C0053C52C /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD375332B7B5B7C0053C52C /* GFAlertVC.swift */; };
 		AADAE4962B862C14001A04EC /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADAE4952B862C14001A04EC /* GFEmptyStateView.swift */; };
+		AADAE4982B864017001A04EC /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADAE4972B864017001A04EC /* UserInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		AAD375312B7B5A470053C52C /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		AAD375332B7B5B7C0053C52C /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		AADAE4952B862C14001A04EC /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		AADAE4972B864017001A04EC /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AAD375222B7A49C90053C52C /* SearchVC.swift */,
 				AAD3752D2B7B4EFA0053C52C /* FollowerListVC.swift */,
 				AAD375242B7A49FE0053C52C /* FavoritesListVC.swift */,
+				AADAE4972B864017001A04EC /* UserInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				AA93D9802B7CDCF300779C75 /* FollowerCell.swift in Sources */,
 				AA93D9822B7CDD8800779C75 /* GFAvatarImageView.swift in Sources */,
 				AA93D9772B7CA93D00779C75 /* User.swift in Sources */,
+				AADAE4982B864017001A04EC /* UserInfoVC.swift in Sources */,
 				AAD375342B7B5B7C0053C52C /* GFAlertVC.swift in Sources */,
 				AA93D9752B7CA87400779C75 /* Follower.swift in Sources */,
 				AA3434552B7A335500C789A3 /* AppDelegate.swift in Sources */,
