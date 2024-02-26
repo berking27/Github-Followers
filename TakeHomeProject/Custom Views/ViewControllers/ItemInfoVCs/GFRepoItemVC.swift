@@ -19,6 +19,11 @@ class GFRepoItemVC: GFItemInfoVC {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, withCount: user.publicGists)
         
-        actionButton.set(backgroundColor: .systemPurple, title: "Get Followers")
+        actionButton.set(backgroundColor: .systemPurple, title: "Get GitHub Profile")
     }
+    
+    override func actionButtonTapped() {
+        delegate.didTapGitHubProfile()
+    }
+    
 }
