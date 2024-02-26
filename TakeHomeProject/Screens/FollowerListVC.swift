@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FollowerListVCDelegate: AnyObject {
+    func didRequestFollowers(for username: String)
+}
+
 class FollowerListVC: UIViewController {
     
     ///Enums are hashable by default
@@ -117,6 +121,9 @@ class FollowerListVC: UIViewController {
     
 }
 
+
+//MARK: UICollectionViewDelegate
+
 extension FollowerListVC: UICollectionViewDelegate {
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -143,11 +150,15 @@ extension FollowerListVC: UICollectionViewDelegate {
         
         let destVC = UserInfoVC()
         destVC.username = follower.login
+        destVC.delegate = self ///Follower List VC is listening to the userInfo VC Communication path is set.
+        
         let navController = UINavigationController(rootViewController: destVC)
         
         present(navController, animated: true)
     }
 }
+
+//MARK: SearchBarDelegate and SearchResultUpdating
 
 extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
     
@@ -165,4 +176,21 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
         updateData(on: followers)
     }
     
+}
+
+//MARK: FollowerListVCDelegate
+
+extension FollowerListVC: FollowerListVCDelegate {
+    
+    func didRequestFollowers(for username: String) {
+        self.username = username
+        title = username
+        page = 1
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        collectionView.setContentOffset(.zero, animated: true)
+        
+        getFollowers(username: username, page: page)
+    }
+
 }
