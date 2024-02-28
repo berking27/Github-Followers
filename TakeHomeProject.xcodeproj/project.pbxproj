@@ -16,6 +16,7 @@
 		AA34345E2B7A335800C789A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA34345D2B7A335800C789A3 /* Assets.xcassets */; };
 		AA3434612B7A335800C789A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA34345F2B7A335800C789A3 /* LaunchScreen.storyboard */; };
 		AA4878D02B7FA1510082C413 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4878CF2B7FA1510082C413 /* UIHelper.swift */; };
+		AA7FF72A2B8F10A900116C74 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FF7292B8F10A900116C74 /* PersistenceManager.swift */; };
 		AA93D96F2B7C97E700779C75 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93D96E2B7C97E600779C75 /* UIViewController+Extension.swift */; };
 		AA93D9752B7CA87400779C75 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93D9742B7CA87400779C75 /* Follower.swift */; };
 		AA93D9772B7CA93D00779C75 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93D9762B7CA93D00779C75 /* User.swift */; };
@@ -53,6 +54,7 @@
 		AA3434602B7A335800C789A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA3434622B7A335800C789A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA4878CF2B7FA1510082C413 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		AA7FF7292B8F10A900116C74 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		AA93D96E2B7C97E600779C75 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		AA93D9742B7CA87400779C75 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		AA93D9762B7CA93D00779C75 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				AA93D9792B7CAE8E00779C75 /* NetworkManager.swift */,
+				AA7FF7292B8F10A900116C74 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				AAD375232B7A49CA0053C52C /* SearchVC.swift in Sources */,
 				AA93D9802B7CDCF300779C75 /* FollowerCell.swift in Sources */,
 				AA93D9822B7CDD8800779C75 /* GFAvatarImageView.swift in Sources */,
+				AA7FF72A2B8F10A900116C74 /* PersistenceManager.swift in Sources */,
 				AAD61EFB2B8CAF7700C2F24C /* GFRepoItemVC.swift in Sources */,
 				AA93D9772B7CA93D00779C75 /* User.swift in Sources */,
 				AADAE4982B864017001A04EC /* UserInfoVC.swift in Sources */,
