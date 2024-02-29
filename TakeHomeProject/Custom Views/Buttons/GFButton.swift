@@ -20,12 +20,14 @@ class GFButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgroundColor: UIColor, title: String) {
-        super.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        self.setTitle(title, for: .normal)
-        configure()
-    }
+     ///Since it is conveinence initializers instead of super.init it should be self.init
+     ///Conveinence initilazer will call normal initializers. So that we don't need configure in this initializers
+     convenience init(backgroundColor: UIColor, title: String) {
+          self.init(frame: .zero)
+          self.backgroundColor = backgroundColor
+          self.setTitle(title, for: .normal)
+          
+     }
     
     private func configure() {
         layer.cornerRadius = 10

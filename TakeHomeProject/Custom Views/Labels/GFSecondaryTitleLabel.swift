@@ -17,11 +17,12 @@ class GFSecondaryTitleLabel: UILabel {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    init(fontSize: CGFloat) {
-        super.init(frame: .zero)
+     
+     ///Since it is conveinence initializers instead of super.init it should be self.init
+     ///Conveinence initilazer will call normal initializers. So that we don't need configure in this initializers
+    convenience init(fontSize: CGFloat) {
+        self.init(frame: .zero)
         font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
-        configure()
     }
 
     private func configure() {

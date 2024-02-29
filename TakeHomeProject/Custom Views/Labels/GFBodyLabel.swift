@@ -18,10 +18,12 @@ class GFBodyLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment) {
-        super.init(frame: .zero)
+     ///Since it is conveinence initializers instead of super.init it should be self.init
+     ///Conveinence initilazer will call normal initializers. So that we don't need configure in this initializers
+     convenience init(textAlignment: NSTextAlignment) {
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
-        configure()
+          
     }
 
     private func configure() {
