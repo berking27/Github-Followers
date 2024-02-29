@@ -54,7 +54,6 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase ///Converting snake_Case to camleCase
-                
                 let followers = try decoder.decode([Follower].self, from: data)
                 completion(.success(followers))
                 
@@ -101,7 +100,7 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase ///Converting snake_Case to camleCase
-                
+                decoder.dateDecodingStrategy = .iso8601
                 let user = try decoder.decode(User.self, from: data)
                 completion(.success(user))
                 
