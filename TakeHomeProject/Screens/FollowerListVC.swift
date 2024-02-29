@@ -172,9 +172,6 @@ extension FollowerListVC: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if #available(iOS 15, *) {
-            UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBarAppearance()
-        }
         
         let activeArray = isSearching ? filteredFollowers : followers
         let follower = activeArray[indexPath.item]
