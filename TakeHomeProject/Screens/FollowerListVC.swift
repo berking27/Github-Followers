@@ -145,7 +145,7 @@ class  FollowerListVC: GFDataLoadingVC {
                     guard let self = self else { return }
                     
                     guard let error = error else {
-                        self.presentGFAlertOnMainThread(title: "Success!", message: "You have successfully favorited this user 🎊", buttonTitle: "OK ✅")
+                        self.presentGFAlertOnMainThread(title: "Success!", message: "You have successfully favorited this user 🎊", buttonTitle: "OK")
                         return
                     }
                     
