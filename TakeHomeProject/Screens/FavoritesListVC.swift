@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesListVC: UIViewController {
+class FavoritesListVC: GFDataLoadingVC {
 
     let tableView = UITableView()
     var favorites: [Follower] = []
@@ -34,11 +34,12 @@ class FavoritesListVC: UIViewController {
     
     func configureTableView() {
         view.addSubview(tableView)
+        
         tableView.frame = view.bounds
         tableView.rowHeight = 80
-        
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.removeExcessCells()
         
         tableView.register(FavoriteCell.self, forCellReuseIdentifier: FavoriteCell.reuseId)
     }
@@ -86,28 +87,24 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
     ///   - tableView: FavoriteList Cells
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite = favorites[indexPath.row]
-        let destVC = FollowerListVC()
-        
-        destVC.username = favorite.login
-        destVC.title = favorite.login
+        let destVC = FollowerListVC(username: favorite.login)
         
         navigationController?.pushViewController(destVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
-        
-        let favorite = favorites[indexPath.row]
-        favorites.remove(at: indexPath.row) /// Delete from Array
-        
-        tableView.deleteRows(at: [indexPath], with: .left) //Deletion TableView Row Slide left to Delete
-        
+      
         ///Deleting from UserDefaults/
-        PersistenceManager.updateWith(favorite: favorite, actionType: .remove) { [weak self] error in
+        PersistenceManager.updateWith(favorite: favorites[indexPath.row], actionType: .remove) { [weak self] error in
             guard let self = self else { return }
-            guard let error = error else { return }
+            guard let error = error else {
+                self.favorites.remove(at: indexPath.row) /// Delete from Array
+                tableView.deleteRows(at: [indexPath], with: .left) //Deletion TableView Row Slide left to Delete
+                
+                return
+            }
             self.presentGFAlertOnMainThread(title: "Unable To remove", message: error.rawValue, buttonTitle: "OK")
         }
     }
-    
 }

@@ -28,6 +28,8 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        usernameTextField.text = ""
+         
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -38,15 +40,15 @@ class SearchVC: UIViewController {
     }
     
     @objc func pushFollowerListVC() {
-        
         guard isUsernameEntered else {
             presentGFAlertOnMainThread(title: "Empty Username", message: "Please Enter a username. We need to know who to look", buttonTitle: "OK")
             return
         }
 
-        let followerListVC = FollowerListVC()
-        followerListVC.username = usernameTextField.text
-        followerListVC.title = usernameTextField.text
+        usernameTextField.resignFirstResponder()
+         
+         let followerListVC = FollowerListVC(username: usernameTextField.text!)
+         
         navigationController?.pushViewController(followerListVC, animated: true)
     }
     

@@ -7,6 +7,7 @@
 
 import Foundation
 
+//NOT USED ANYMORE!!
 extension String {
     
     func convertToDate() -> Date? {

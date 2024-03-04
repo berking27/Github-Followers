@@ -18,12 +18,15 @@ class GFTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
-        super.init(frame: .zero)
+     
+     ///Since it is conveinence initializers instead of super.init it should be self.init
+     ///Conveinence initilazer will call normal initializers. So that we don't need configure in this initializers
+    convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
-        configure()
+        //configure()
+         ///Since it's conveience initializer Don't need this line of code
     }
 
     
