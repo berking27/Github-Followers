@@ -99,6 +99,7 @@ class  FollowerListVC: GFDataLoadingVC {
                 }
                 dismissLoadingView()
             }
+            isLoadingMoreFollowers = false
         }
     }
     
