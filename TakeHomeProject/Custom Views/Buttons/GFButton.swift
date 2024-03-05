@@ -47,5 +47,5 @@ class GFButton: UIButton {
 }
 
 #Preview {
-    SearchVC()
+    GFButton(color: .green, title: "Test Button", systemImageName: "pencil")
 }
