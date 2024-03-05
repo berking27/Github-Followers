@@ -106,6 +106,9 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
             guard let error = error else {
                 self.favorites.remove(at: indexPath.row) /// Delete from Array
                 tableView.deleteRows(at: [indexPath], with: .left) //Deletion TableView Row Slide left to Delete
+                if self.favorites.isEmpty {
+                    self.showEmptyStateView(with: "No favorites? \n Add one in the Follower screen", in: self.view)
+                }
                 
                 return
             }
