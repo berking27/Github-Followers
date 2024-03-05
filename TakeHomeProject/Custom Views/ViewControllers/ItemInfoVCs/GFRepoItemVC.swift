@@ -25,7 +25,7 @@ class GFRepoItemVC: GFItemInfoVC {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, withCount: user.publicGists)
         
-        actionButton.set(backgroundColor: .systemPurple, title: "Get GitHub Profile")
+        actionButton.set(color: .systemPurple, title: "Get GitHub Profile", systemImageName: "person")
     }
     
     override func actionButtonTapped() {
