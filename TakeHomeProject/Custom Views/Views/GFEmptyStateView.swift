@@ -20,12 +20,14 @@ class GFEmptyStateView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    init(message: String) {
-        super.init(frame: .zero)
-        messageLabel.text = message
-        configure()
-    }
+     
+     
+     ///Since it is conveinence initializers instead of super.init it should be self.init
+     ///Conveinence initilazer will call normal initializers. So that we don't need configure in this initializers
+     convenience init(message: String) {
+          self.init(frame: .zero)
+          messageLabel.text = message
+     }
     
     private func configure() {
         addSubviews(messageLabel, logoImageView)
